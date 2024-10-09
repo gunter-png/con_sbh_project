@@ -23,8 +23,8 @@ set(ament_dependencies
   turtlesim
 )
 
-# add_executable(simple_sub_node src/print_pose.cpp)
-# ament_target_dependencies(simple_sub_node ${ament_dependencies} )
+add_executable(draw draw.cpp)
+ament_target_dependencies(draw ${ament_dependencies} )
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})

@@ -6,11 +6,11 @@ def generate_launch_description():
         Node(
             package='turtlesim',
             executable='turtlesim_node',
-            name='sim',
+            name='sim'
         ),
         Node(
             package='con_sbh_project',
-            executable='temp.cpp',
+            executable='idk',
             output='screen',
-        )
+        ),
     ])

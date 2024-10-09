@@ -3,14 +3,14 @@
 #include "geometry_msgs/msg/pose.hpp"
 #include "turtlesim/msg/pose.hpp"
 
-class BatmanDraw : public rclcpp::Node
+class HouseDraw : public rclcpp::Node
 {
 public:
-    BatmanDraw() : Node("batman_draw"), count_(0)
+    Draw() : Node("draw"), count_(0)
     {
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
-        timer_ = this->create_wall_timer(std::chrono::milliseconds(1), std::bind(&BatmanDraw::loop, this)); //timer_cb_group_
-        RCLCPP_INFO_STREAM(this->get_logger(), "Drawing a batman logo to turtlsesim.");
+        timer_ = this->create_wall_timer(std::chrono::milliseconds(1), std::bind(&HouseDraw::loop, this)); //timer_cb_group_
+        RCLCPP_INFO_STREAM(this->get_logger(), "Drawing a house to turtlsesim.");
         loop();
     }
 
@@ -57,7 +57,7 @@ private:
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<BatmanDraw>());
+    rclcpp::spin(std::make_shared<HouseDraw>());
     rclcpp::shutdown();
     return 0;
 }
