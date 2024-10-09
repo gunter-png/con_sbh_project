@@ -10,7 +10,7 @@ def generate_launch_description():
         ),
         Node(
             package='con_sbh_project',
-            executable='idk',
+            executable='draw',
             output='screen',
         ),
     ])
