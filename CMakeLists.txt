@@ -23,14 +23,20 @@ set(ament_dependencies
   turtlesim
 )
 
-add_executable(fractal_square src/fractal_square.cpp)
-ament_target_dependencies(fractal_square ${ament_dependencies} )
-
+add_executable(cylinder_draw src/cylinder_draw.cpp)
+ament_target_dependencies(cylinder_draw ${ament_dependencies} )
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
-
 install(TARGETS
-fractal_square
+cylinder_draw
+DESTINATION lib/${PROJECT_NAME})
+
+add_executable(staircase_draw src/staircase_draw.cpp)
+ament_target_dependencies(staircase_draw ${ament_dependencies} )
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME})
+install(TARGETS
+staircase_draw
 DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
