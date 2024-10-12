@@ -38,7 +38,7 @@ ros2 launch con_sbh_project launch.py
 ```
 ## Image
 
-![finished](image.png)
+![finished](img/image.png)
 ##
 
 A képet `rqt` segítéségével, a `set_pen` `off`bekapcsolásával (minden teknősnél), valamint a `teleport_absolute ` `x: 0.0`, és `y: 0.0`-hoz való elteleportálásuk segítségével csináltam
